@@ -1,4 +1,4 @@
-
+# Inspired from http://tammersaleh.com/posts/a-better-rvm-bash-prompt
 function __git_dirty {
   git diff --quiet HEAD &>/dev/null 
   [ $? == 1 ] && echo "!"
@@ -17,9 +17,6 @@ function __my_rvm_ruby_version {
 
 bash_prompt() {
   local NONE="\[\033[0m\]"    # unsets color to term's fg color
-
-  # bolding in the current color
-  local BOLD="\[\033[1m\]"
   local BOLDOFF="\[\033[22m\]"
 
   # regular colors
@@ -55,7 +52,7 @@ bash_prompt() {
   local UC=$W                 # user's color
   [ $UID -eq "0" ] && UC=$R   # root's color
 
-  PS1="$EMB\u$Y@$EMY\h$Y[$(__my_rvm_ruby_version)$BOLD$(__git_branch)$BOLDOFF]$K:$EMK\w$ $W"
+  PS1="$EMB\u$Y@$EMY\h$Y[$(__my_rvm_ruby_version)$EMY$(__git_branch)$Y]$K:$EMK\w$ $W"
 
 #  PS1="$B\$(__my_rvm_ruby_version)$Y\h$W:$EMY\w$EMW\$(__git_branch)$EMY\$(__git_dirty)${NONE} $ "
 }
