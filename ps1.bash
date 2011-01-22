@@ -11,7 +11,7 @@ function __git_branch {
 function __my_rvm_ruby_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   local version=$(echo $MY_RUBY_HOME | awk -F'.rvm/rubies/' '{print $2}')
-  local full="$version$gemset"
+  local full="$version@$gemset"
   [ "$full" != "" ] && echo "$full"
 }
 
