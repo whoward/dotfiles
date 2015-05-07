@@ -1,0 +1,25 @@
+{
+	"auto_complete": true,
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"index_files": true,
+	"rulers":
+	[
+		80
+	],
+	"shift_tab_unindent": true,
+	"tab_size": 2,
+	"theme": "itg.flat.dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_whitespace_on_save": true
+}
